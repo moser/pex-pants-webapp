@@ -1,1 +1,5 @@
 .pants.d
+*.swp
+.cache/
+dist/
+.pants.workdir.file_lock

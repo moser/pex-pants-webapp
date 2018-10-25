@@ -1,9 +1,11 @@
 from flask import Flask
+
+from lepkg.anotherpkg import MESSAGE
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return MESSAGE
 
 def run():
     app.run()
