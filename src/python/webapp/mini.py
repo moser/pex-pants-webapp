@@ -1,6 +1,6 @@
 import flask as f
 
-from lepkg.anotherpkg import MESSAGE
+from webapp.anotherpkg import MESSAGE
 app = f.Flask(__name__)
 
 @app.route("/")

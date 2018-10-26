@@ -3,7 +3,7 @@ import multiprocessing
 import gunicorn.app.base
 from gunicorn.six import iteritems
 
-from lepkg.mini import app
+from webapp.mini import app
 
 
 def number_of_workers():
@@ -28,8 +28,9 @@ class StandaloneApplication(gunicorn.app.base.BaseApplication):
 
 
 def run_server():
+    # we're listening on all interfaces just for demo reasons...
     options = {
-        'bind': '%s:%s' % ('127.0.0.1', '8080'),
+        'bind': '%s:%s' % ('0.0.0.0', '8080'),
         'workers': number_of_workers(),
     }
     StandaloneApplication(app, options).run()
