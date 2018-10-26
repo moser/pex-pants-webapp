@@ -1,11 +1,11 @@
-from flask import Flask
+import flask as f
 
 from lepkg.anotherpkg import MESSAGE
-app = Flask(__name__)
+app = f.Flask(__name__)
 
 @app.route("/")
 def hello():
-    return MESSAGE
+    return f.render_template("index.html", message=MESSAGE)
 
 def run():
     app.run()

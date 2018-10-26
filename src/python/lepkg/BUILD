@@ -3,7 +3,7 @@ python_library(
   dependencies=[
     '3rdparty/python:Flask',
   ],
-  sources=globs("**/*.py"),
+  sources=globs("**/*.py", "static/*", "templates/*.html", exclude=[globs("**/*.swp")]),
 )
 
 python_binary(
